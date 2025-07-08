@@ -1,0 +1,41 @@
+/* c-btnRadius
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-btnRadius {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--gothic);
+    line-height: calc(20 / 18);
+    letter-spacing: 0.2em;
+    color: #fff;
+    max-width: 521px;
+    width: 100%;
+    height: 64px;
+    border-radius: 50px;
+    border: 1px solid #2e3252;
+    background-color: #2e3252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @media print, screen and (max-width: 1035px) {
+      font-size: 16px;
+      line-height: calc(20 / 16);
+      max-width: 316px;
+      height: 39px;
+    }
+
+    &--fwSmall {
+      @extend .c-btnRadius__btn;
+      font-weight: 500;
+    }
+  }
+}

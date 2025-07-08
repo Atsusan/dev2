@@ -1,0 +1,40 @@
+/* c-topParts
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+ 
+.c-topParts {
+  padding-block: 136px 39px;
+  border-bottom: 1px solid var(--colo_2E3252);
+
+  &__inner {
+    max-width: 1244px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 30px;
+  }
+
+  &__heading {
+    font-family: "bodoniXT", serif;
+    font-size: 50px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--colo_2E3252);
+  }
+
+  &__button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    color: var(--colo_2E3252);
+    margin-top: 3px;
+    transition: all .3s ease;
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+/* u-desktop
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+ 
+.u-desktop {
+  @include g.tabletS {
+    display: none;
+  }
+}

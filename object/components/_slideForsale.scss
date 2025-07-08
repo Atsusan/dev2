@@ -1,0 +1,44 @@
+/* c-slideForsale
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-slideForsale {
+  position: relative;
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__next, &__prev {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include g.tabletS {
+      display: none;
+    }
+  }
+
+  &__next {
+    .c-slideForsale__icon {
+      transform: scale(-1, 1);
+    }
+  }
+
+  &__prev {
+    right: unset;
+    left: -30px;
+
+  }
+
+  &__icon {
+    width: 10px;
+  }
+}

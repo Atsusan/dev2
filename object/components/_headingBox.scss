@@ -1,0 +1,125 @@
+/* c-headingBox
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-headingBox {
+  max-width: 285px;
+  width: 100%;
+  min-height: 50px;
+  height: 100%;
+  border: 1px solid #192161;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  @media print, screen and (max-width: 1035px) {
+    max-width: 156px;
+    min-height: 27px;
+  }
+
+  &--widthXLarge {
+    @extend .c-headingBox;
+    max-width: 330px;
+    @media print, screen and (max-width: 1035px) {
+      max-width: 156px;
+      min-height: 27px;
+    }
+
+    .c-headingBox__title {
+      font-size: 25px;
+      @include g.tabletS {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--widthLarge {
+    @extend .c-headingBox;
+    max-width: unset;
+    min-width: 285px;
+    width: fit-content;
+    min-height: 59.89px;
+    padding-inline: 50px;
+    @media print, screen and (max-width: 1035px) {
+      min-width: 156px;
+      min-height: 27px;
+      padding-inline: 20px;
+    }
+  }
+
+  &--widthLargeBlue {
+    @extend .c-headingBox;
+    max-width: unset;
+    min-width: 285px;
+    width: fit-content;
+    min-height: 59.89px;
+    background: #2e3252;
+    padding-inline: 50px;
+    @media print, screen and (max-width: 1035px) {
+      min-width: 156px;
+      min-height: 27px;
+      padding-inline: 20px;
+      min-height: 27px;
+    }
+
+    .c-headingBox__title {
+      color: #fff;
+    }
+  }
+
+  &--textLetterSmall {
+    @extend .c-headingBox;
+
+    .c-headingBox__title {
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &--spWide {
+    @extend .c-headingBox;
+    @include g.tabletS {
+      max-width: 185px;
+    }
+  }
+
+  // &--heightLarge {
+  //   @extend .c-headingBox;
+  //   min-height: 59.89px;
+  //   @media print, screen and (max-width: 1035px) {
+  //     min-height: 27px;
+  //   }
+  // }
+  // &--heightLargeBlue {
+  //   @extend .c-headingBox;
+  //   min-height: 59.89px;
+  //   background: #2e3252;
+  //   @media print, screen and (max-width: 1035px) {
+  //     min-height: 27px;
+  //   }
+
+  //   .c-headingBox__title {
+  //     color: #fff;
+  //   }
+  // }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: calc(28 / 22);
+    letter-spacing: 0.6em;
+    color: #2e3252;
+    @media print, screen and (max-width: 1035px) {
+      font-size: 14px;
+      line-height: calc(28 / 14);
+    }
+
+    &--lsSmall {
+      @extend .c-headingBox__title;
+      letter-spacing: 0.5em;
+      @media print, screen and (max-width: 1035px) {
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}

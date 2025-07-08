@@ -1,0 +1,31 @@
+/* l-container
+----------------------------------------------------------------- */
+@use "../global" as g;
+
+.l-container {
+  max-width: 1066px;
+  width: 100%;
+  margin: 0 auto;
+
+  &--slide {
+    max-width: 1126px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 30px;
+    @include g.tabletS {
+      max-width: 100%;
+      padding-inline: 0;
+    }
+  }
+
+  &--slideWide {
+    max-width: 1244px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 30px;
+    @include g.tabletS {
+      max-width: 100%;
+      padding-inline: 0;
+    }
+  }
+}

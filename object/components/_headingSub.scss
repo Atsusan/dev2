@@ -1,0 +1,34 @@
+/* c-headingSub
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+ 
+.c-headingSub {
+  text-align: center;
+  max-width: 254px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid var(--back_2E3252);
+  font-family: var(--gothic);
+  font-size: g.cls(16, 20);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: var(--colo_2E3252);
+  padding-block: 12px;
+  @include g.tabletS {
+    padding-block: 17px;
+  }
+
+  &--spBorderNone {
+    @extend .c-headingSub;
+    @include g.tabletS {
+      border: none;
+    }
+  }
+
+  &--bgNavy {
+    background-color: var(--back_2E3252);
+    color: #fff;
+  }
+}

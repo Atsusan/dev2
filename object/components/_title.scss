@@ -1,0 +1,101 @@
+/* c-title
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-title {
+  text-align: center;
+
+  &--border {
+    @extend .c-title;
+    border-bottom: 1px solid var(--back_2E3252);
+    padding-bottom: 10px;
+  }
+
+  &--spPadding {
+    @include g.tabletS {
+      margin-inline: 20px;
+    }
+  }
+
+  &--fontSm {
+    @extend .c-title;
+    .c-title__en {
+      font-size: g.cls(20, 32);
+      line-height: 0.8;
+      letter-spacing: 0;
+    }
+  }
+
+  &--minHeight {
+    min-height: 51.19px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    @include g.tabletS {
+      min-height: auto;
+    }
+  }
+
+  &__en {
+    display: block;
+    font-size: g.cls(22, 40);
+    letter-spacing: -0.01em;
+    font-family: "bodoniXT", serif;
+    font-weight: normal;
+    color: var(--colo_2E3252);
+  }
+
+  &--md {
+    .c-title__en {
+      font-size: 57px;
+    }
+    @media print,
+    screen and (max-width: 1035px) {
+      .c-title__en {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &--sm {
+    .c-title__en {
+      font-size: 46px;
+    }
+    @media print,
+    screen and (max-width: 1035px) {
+      .c-title__en {
+        font-size: 36px;
+      }
+    }
+    .c-title__ja {
+      font-size: 13px;
+    }
+  }
+
+  &--mansions {
+    .c-title__en {
+      line-height: 1;
+    }
+    .c-title__js {
+      letter-spacing: 0.2em;
+    }
+  }
+
+  &__ja {
+    display: block;
+    font-weight: normal;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    @media print,
+    screen and (max-width: 1035px) {
+      font-size: 11px;
+    }
+
+    &--spacing {
+      letter-spacing: 0.6em;
+    }
+  }
+}

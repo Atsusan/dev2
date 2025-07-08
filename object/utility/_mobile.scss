@@ -1,0 +1,11 @@
+/* u-mobile
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+ 
+.u-mobile {
+  display: none;
+  @include g.tabletS {
+    display: block;
+  }
+}

@@ -1,0 +1,87 @@
+/* c-sub-title
+-----------------------------------------------
+------------------ */
+@use "../../global" as g;
+
+.c-sub-title {
+  text-align: center;
+  font-family: "bodoniXT", serif;
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+
+  &__main {
+    font-size: 36px;
+    display: block;
+
+    &--naby {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      padding: 16px 150px;
+
+      &::before,
+      &::after {
+        background-image: linear-gradient(to right, transparent, #0F1640 50%, transparent);
+        background-repeat: no-repeat;
+        content: "";
+        height: 2px;
+        left: 0;
+        margin-inline: auto;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__sub {
+    font-size: 22px;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.c-sub-title__main--bg-naby {
+  color: #fff;
+  display: block;
+  line-height: 1;
+  padding: 16px 15px;
+  background: rgb(27, 38, 106);
+  background: linear-gradient(173deg, rgba(27, 38, 106, 1) 0%, rgba(27, 38, 106, 1) 20%, rgba(15, 22, 64, 1) 20%, rgba(15, 22, 64, 1) 80%, rgba(27, 38, 106, 1) 80%, rgba(27, 38, 106, 1) 100%);
+}
+
+.c-sub-title__sub {
+  display: block;
+}
+
+.c-sub-title__sub--gold {
+  margin-top: 44px;
+}
+
+@media print,
+screen and (max-width: 1035px) {
+  .c-sub-title__main--gold {
+    padding: 12px 100px;
+  }
+}
+
+@media print,
+screen and (max-width: 1035px) {
+  .c-sub-title__main {
+    font-size: 24px;
+  }
+
+  .c-sub-title__sub {
+    font-size: 13px;
+  }
+}
